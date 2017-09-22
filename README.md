@@ -9,40 +9,51 @@ Using the terminal to browse the web
  - Open the terminal
  - Enter the following command to install curl: ```sudo apt install curl```
 
-## Open the terminal and use the application "curl"
+## Load up your vagrant box and use the application "curl"
  - Open the terminal
  - The usage of curl is: ```curl -v "[url]"```
+ - If necessary install curl by following the instructions given when you try to launch the curl command
  - For example, entering ```curl -v "https://google.com"``` would have the subsequent result:
+
 ```
-* Rebuilt URL to: http://info253.p2ptrainer.com/
-*   Trying 74.50.7.240...
-* Connected to info253.p2ptrainer.com (74.50.7.240) port 80 (#0)
+* Trying 172.217.5.68...
+* TCP_NODELAY set
+* Connected to www.google.com (172.217.5.68) port 443 (#0)
+* TLS 1.2 connection using TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+* Server certificate: www.google.com
+* Server certificate: Google Internet Authority G2
+* Server certificate: GeoTrust Global CA
 > GET / HTTP/1.1
-> Host: info253.p2ptrainer.com
-> User-Agent: curl/7.47.0
+> Host: www.google.com
+> User-Agent: curl/7.54.0
 > Accept: */*
 > 
 < HTTP/1.1 200 OK
-< Date: Wed, 21 Sep 2016 05:46:01 GMT
-< Server: Apache/2.4.16 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 mod_fcgid/2.3.9
-< Last-Modified: Tue, 20 Sep 2016 05:37:12 GMT
-< ETag: "24f-53ce9d202d200"
-< Accept-Ranges: bytes
-< Content-Length: 591
-< Content-Type: text/html
+< Date: Fri, 22 Sep 2017 19:45:50 GMT
+< Expires: -1
+< Cache-Control: private, max-age=0
+< Content-Type: text/html; charset=ISO-8859-1
+< P3P: CP="This is not a P3P policy! See https://www.google.com/support/accounts/answer/151657?hl=en for more info."
+< Server: gws
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: SAMEORIGIN
+< Set-Cookie: NID=112=NBVb7hjEG5Y2-jNvczgktDkk1SAKRnE6hLKA6c2pAWU7Y-iTHVGXOYWyjIDfaACqOP820vE9ysAkmOhtox2NxsjsVRhgXB2OAg3gE7awyR51OEv2n9E5G1u_hkMJQb3R; expires=Sat, 24-Mar-2018 19:45:50 GMT; path=/; domain=.google.com; HttpOnly
+< Alt-Svc: quic=":443"; ma=2592000; v="39,38,37,35"
+< Accept-Ranges: none
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
 < 
-<!DOCTYPE html>
-<html>
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
 ...
-``` 
+```
 
 ## Answer the following questions in a text file called "answers.txt" at the root of this repository
-  - For the domain info253.p2ptrainer.com using the scheme "http" 
-    - What is the return code for the path /index.html?
-    - What is the return code for the path /aboutus.html?
-    - What is the return code for the path /contactus.html?
-        - If the path /contactus.html for the given domain was entered into the browser what would happen? Write down the curl command that would simulate the HTTP request the browser would execute.
-    - What is the return code for /main.html?
-    - What is the return code for /blog?
+  - For the domain www.google.com" using the scheme "http" 
+    - What is the return code for the path "/" ?
+    - What is the return code for the path /intl/en/policies/terms/?
+  - For the domain "google.com" using the scheme "https"
+    - What is the return code for the path "/"
+        - If the path "/" for the domain "google.com" was entered into the browser what would happen? Write down the curl command that would simulate the HTTP request the browser would execute.
+    - What is the return code for the path "/terms"
  - What is the return code for http://www.google.com/teapot?
 
