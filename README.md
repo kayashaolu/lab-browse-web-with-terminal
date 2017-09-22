@@ -5,15 +5,11 @@ Using the terminal to browse the web
  - Use the terminal to browse the web
  - Explore different status codes
 
-## First install curl in your virtual machine
- - Open the terminal
- - Enter the following command to install curl: ```sudo apt install curl```
-
 ## Load up your vagrant box and use the application "curl"
  - Open the terminal
  - The usage of curl is: ```curl -v "[url]"```
  - If necessary install curl by following the instructions given when you try to launch the curl command
- - For example, entering ```curl -v "https://google.com"``` would have the subsequent result:
+ - For example, entering ```curl -v "https://www.google.com"``` would have the subsequent result:
 
 ```
 * Trying 172.217.5.68...
