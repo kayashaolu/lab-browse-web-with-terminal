@@ -1,11 +1,11 @@
-# Lab 5
+# Lab 7
 Using the terminal to browse the web
 
 ## In this lab you will accomplish the following
  - Use the terminal to browse the web
  - Explore different status codes
 
-## Load up your vagrant box and use the application "curl"
+## Use the application "curl"
  - Open the terminal
  - The usage of curl is: ```curl -v "[url]"```
  - If necessary install curl by following the instructions given when you try to launch the curl command
